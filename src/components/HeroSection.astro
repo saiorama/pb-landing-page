@@ -1,0 +1,40 @@
+---
+import Container from "./Container.astro"
+import OnboardingForm from './OnboardingForm.vue';
+---
+
+<div class="relative" id="home">
+  <div aria-hidden="true" class="absolute inset-0 grid grid-cols-2 -space-x-52 opacity-40 dark:opacity-20">
+      <div class="blur-[106px] h-56 bg-gradient-to-br from-primary to-purple-400 dark:from-blue-700"></div>
+      <div class="blur-[106px] h-32 bg-gradient-to-r from-cyan-400 to-sky-300 dark:to-indigo-600"></div>
+  </div>
+  <Container>
+    <div class="relative pt-36 ml-auto">
+      <div class="lg:w-2/3 text-center mx-auto">
+        <h1 class="text-gray-900 dark:text-white font-bold text-5xl md:text-6xl xl:text-7xl">Do <span class="text-primary dark:text-white">more</span> with just your basic <span class="text-primary dark:text-white">Gmail.</span></h1>
+        <p class="mt-8 text-gray-700 dark:text-gray-300">Use your free Gmail account to <span class="text-primary dark:text-white">send and receive emails</span> from your domain, <span class="text-primary dark:text-white">sell</span> digital content and downloads, <span class="text-primary dark:text-white">publish </span> beautiful blogposts, <span class="text-primary dark:text-white">share</span> emails as links on WhatsApp, <span class="text-primary dark:text-white">publish </span> static pages, see inbound <span class="text-primary dark:text-white">email stats</span>, and more! Absolutely free. World-class uptime and support.</p>
+        <p class="mt-2 text-gray-400 dark:text-gray-300 text-sm italic decoration-wavy underline decoration-primary">(All copyrights(©) and trademarks(™) belong to their owners)</p>
+        <OnboardingForm client:only="vue"/>
+      <div
+        class="inline-block rounded border border-slate-100 bg-transparent px-12 py-3 font-medium text-slate-300 text-xsm"
+      >
+        Or try these 
+      </div>
+        <div class="py-8 mt-4 border-y border-gray-100 dark:border-gray-800 sm:flex justify-between bg-green-100">
+            <div class="text-left p-4">
+                <h6 class="text-lg font-semibold text-gray-700 dark:text-white">Publish a blogpost</h6>
+                <p class="mt-2 text-gray-500">Compose and format a blogpost in Gmail, then send it off to be auto-published to your blog. <a class="underline" href="mailto:blog@pretzelboxdemo.cc?subject=Test%20Post&body=My%20first%20blogpost.">Send from Gmail</a></p>
+            </div>
+            <div class="text-left p-4">
+                <h6 class="text-lg font-semibold text-gray-700 dark:text-white">Share downloadable content</h6>
+                <p class="mt-2 text-gray-500">Publish and sell attachments like images, worksheets, and other digital content. <a class="underline" href="https://pretzelbox.cc/blog/pretzelbox-me-sell-photos-online-with-pretzelbox--8773rbm.html" target="_blank">See an exampleˆ</a></p>
+            </div>
+            <div class="text-left p-4">
+                <h6 class="text-lg font-semibold text-gray-700 dark:text-white">Send emails to WhatsApp</h6>
+                <p class="mt-2 text-gray-500">All emails, inbound and outbound, are shareable as urls. Make sure your emails are read on the go. <a class="underline" href="https://wa.me/919372441295?text=https://pretzelbox.cc/blog/sharing-mails-to-whatsapp--j3g42je.html">Send by WhatsApp</a></p>
+            </div>
+        </div>
+      </div>
+    </div>
+  </Container>
+</div>
